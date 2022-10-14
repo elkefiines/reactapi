@@ -54,14 +54,14 @@ body {
 }
 
 #card {
-  position: absolute;
+  position: relative;
   width: 450px;
   height: 225px;
   padding: 25px;
   padding-top: 0;
   padding-bottom: 0;
   left: 50%;
-  top: 67.5px;
+  top: -220px;
   margin-left: -250px;
   background: #e9e2d0;
   box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;

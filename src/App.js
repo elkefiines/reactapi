@@ -1,6 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import UserList from "./components/UserList";
+import Info from "./components/Info/Info";
 import axios from "axios";
 
 function App() {
@@ -15,10 +17,13 @@ function App() {
     };
 
     getData();
-  },[]);
+  }, []);
   return (
     <>
-      <UserList users={users} />
+      <Routes>
+        <Route path="/" element={<UserList users={users} />} />
+        <Route path="/info/:name" element={<Info users={users} />} />
+      </Routes>
     </>
   );
 }

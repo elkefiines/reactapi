@@ -1,11 +1,15 @@
 import React from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 const UserItem = ({ user }) => {
   return (
     <div>
       <div id="gradient"></div>
       <div id="card">
+        <Link to={`/info/${user.name}`}>
+          <h6>more information</h6>
+        </Link>
         <h2>{user.name}</h2>
         <h5>Email: {user.email}</h5>
         <h5>
